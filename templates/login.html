@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block titulo %}Iniciar sesión{% endblock %}
+{% block contenido %}
+<section class="tarjeta estrecha">
+<h1>Iniciar sesión</h1>
+<form method="post" action="{{ url_for('login') }}">
+<label for="usuario">Usuario</label>
+<input type="text" id="usuario" name="usuario" maxlength="30" autocomplete="username" required>
+<label for="clave">Clave</label>
+<input type="password" id="clave" name="clave" autocomplete="current-password" required>
+<button type="submit">Ingresar</button>
+</form>
+</section>
+{% endblock %}
